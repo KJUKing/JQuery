@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+            margin: 25px;
+            padding: 5px;
+            width: 60%;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        #d1{
+            box-shadow: 10px 10px 5px blue;
+        }
+        #d2{
+            /* offset-x offset-y blur spread(그림자확장) color */
+            box-shadow: 0px 0px 4px 5px blue;
+        }
+        #d3:hover{
+            /* offset-x offset-y blur spread(그림자확장) color */
+            box-shadow: 0px 0px 4px 5px blue;
+        }
+        #d4:hover{
+            box-shadow: 0 -5px 5px 1px orange,
+            -5px 0 5px 1px green,
+            5px 0 5px 1px red;
+            
+            transition: all 0.55s ease-in-out;
+        }
+        #d5:hover{
+            box-shadow: 0 -5px 5px 1px orange,
+            -5px 0 5px 1px green,
+            5px 0 5px 1px red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+</body>
+</html>l

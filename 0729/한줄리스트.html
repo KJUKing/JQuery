@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>한줄리스트</title>
+<style type="text/css">
+body *{
+	box-sizing: border-box;
+}
+/* body{
+	min-width: 500px;
+} */
+ul{
+	border: 1px solid blue;
+}
+li{
+	border: 1px dotted green;
+	margin: 2px;
+	padding: 3px;
+}
+#u2{
+	border: 10px inset red;
+	list-style-type: none;
+	border-left : none;
+	border-right : none;
+	background: yellow;
+	height: 80px;
+}
+#u2 li{
+	border: none;
+	float: left;
+	/* width: calc(23% - 1%); */
+	width: 23%;
+	margin-top: 20px;
+}
+#u2 a{
+	text-decoration: none;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+a:link{
+	color: hotpink;
+}
+a:visited {
+	color: green;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: blue;
+	font-size: 1.3rem;
+}
+/* 800px보다 작아지면 */
+@media (max-width : 800px){
+	#u2{
+		height: 200px;
+	}
+	#u2 li{
+		display: block;
+		width: 90%;	
+	}
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Project</a></li>
+	<li><a href="#">notice</a></li>
+	<li><a href="#">qna</a></li>
+</ul>
+
+<hr>
+<ul id="u2">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Project</a></li>
+	<li><a href="#">notice</a></li>
+	<li><a href="#">qna</a></li>
+</ul>
+</body>
+</html>

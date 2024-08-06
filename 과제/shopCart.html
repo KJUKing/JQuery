@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        #cart {
+            margin-top: 50px;
+            border: 1px solid #ccc; /* 네모난 경계선 추가 */
+            padding: 20px;
+            border-radius: 5px;
+            width: 600px; /* 폼의 너비 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        #cart h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button[type="reset"] {
+            background-color: #6c757d;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart">
+        <h4>장바구니 페이지</h4>
+        <table>
+            <tr>
+                <th>품목</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+            <tr>
+                <td>컴퓨터 세트</td>
+                <td>2,000,000원</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>티셔츠</td>
+                <td>50,000원</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>음악파일</td>
+                <td>1,000원</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>영화파일</td>
+                <td>5,000원</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td>0</td>
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <button type="button">계산</button>
+            <button type="button">구매</button>
+            <button type="reset">초기화</button>
+        </div>
+        <a class="back-link" href="./main.html">Back to Home</a>
+    </div>
+</body>
+</html>

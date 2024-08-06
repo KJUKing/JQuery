@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted orange;
+            background-image: linear-gradient(skyblue, pink, white);
+        }
+    </style>
+    <script>
+        const myCar = {
+            make : 'bmw',
+            model : 'x5',
+            year : 2020
+        }
+
+        proc1 = () => {
+            //객체 속성값 접근
+            console.log(myCar.make, myCar.model, myCar.year);
+            console.log(myCar['make'], myCar['model'], myCar['year']);
+
+            let str = "";
+            //반복문 이용
+            for(let i in myCar){ //i변수는 속성이름
+                //console.log(i);
+                str += `myCar.${i} : ${myCar[i]} <br>`;
+            }
+            document.querySelector('#result1').innerHTML =str;
+        }
+
+        proc2 = () => {
+            // const keys = Object.keys(myCar); //myCar객체의 속성만 갖고옴
+            // const values = Object.values(myCar);
+            let str ="";
+            // keys.forEach(function(item, index){
+            //     str += `${index} : ${item} <br>`;
+            // })
+
+            for(const key of Object.keys(myCar)){
+                str += `${key} <br>`
+            }
+            document.querySelector('#result2').innerHTML = str;
+        }
+
+        proc3 = () => {
+            let str ="";
+            // const values = Object.values(myCar);
+            // values.forEach((value, index) => {
+            //     str += `${index} : ${value} <br>`
+            // })
+
+            for(const value of Object.values(myCar)){
+                str += `${value} <br>`
+            }
+            document.querySelector('#result3').innerHTML = str;
+        }
+
+        proc4 = () => {
+            let str ="";
+            // const ent = Object.entries(myCar);
+            
+            // ent.forEach(function([key, value], index){
+            //     str += `${index} : ${key} -> ${value} <br>`
+            // })
+
+            //보조분해
+            for(const [key, value] of Object.entries(myCar)){
+                str += `${key} -> ${value} <br>`
+            }
+            document.querySelector('#result4').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    
+    
+    <h2>반복문 for(let i in myCar) : i는 속성을 대입받는다</h2>
+    <input type="button" value="확인" onclick="proc1()">
+    <br>
+    <div id="result1"></div>
+    
+    
+    <h2>3. const key of Object.keys(myCar)</h2>
+    <input type="button" value="확인" onclick="proc2()">
+    <br>
+    <div id="result2"></div>
+
+    <input type="button" value="확인" onclick="proc3()">
+    <br>
+    <div id="result3"></div>
+
+
+    <h3>4. const [key, value] of Object.entries(myCar)</h3>
+    <br>
+    <input type="button" value="확인" onclick="proc4()">
+    <div id="result4"></div>
+
+
+    <h3>4. const [key, value] of Object.entries(myCar)</h3>
+    <br>
+    <input type="button" value="확인" onclick="proc5()">
+ 
+    <div id="result5"></div>
+</body>
+</html>

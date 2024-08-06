@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="../css/public.css">
+    <script>
+        proc1 = () => {
+            const arr = []; // arr = new Array();
+            while(true){
+                //입력
+                let fr = prompt("입력하세요");
+                if(fr == null) break;
+
+                fr = fr.trim();
+                
+                if(fr.length <= 0) break;
+                //입력값 비교 - break;
+                // if(fr == "" || fr == null){
+                //     break;
+                // }
+                //배열에 추가
+                arr.push(fr);
+            }
+            
+            document.getElementById('result1').innerHTML = arr;
+        }
+
+        proc2 = () => {
+            // 12, 34, 56, 78, 34, 12, 99
+            const suArr = [];
+            let i = 1;
+            while(true){
+                //입력
+                let input  = prompt("수 "+i+"입력");
+
+                //입력 값비교 - suArr.indexOf(입력한값)
+
+                let idx = suArr.indexOf(input);
+                // if(idx < 0){
+                //     //suArr배열에 저장
+                //     suArr.push(input);
+                // }
+
+                //es7에서 새로운 메소드 -includes -true/false
+                if(!suArr.includes(input)){
+                    // suArr.push(input);
+                    suArr[suArr.length] = input;
+                }
+
+                //한개씩 입력할때는 suArr[1] = input
+
+     
+                
+                //배열개수 비교 -break
+                if(suArr.length >= 5) break;
+                i++;
+            }
+            document.getElementById('result2').innerHTML = suArr;
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h3>1. prompt 이용하여 이름 계속입력받아 배열저장하고 출력하는 프로그램<br>
+            입력의 마지막은 공백 또는 취소버튼 눌렀을때 null로 끝</h3>
+        <input type="button" value="추가" onclick="proc1()">
+        <br>
+        <div id="result1"></div>
+    </div>
+    <div class="box">
+        <h3>서로 중복되지않은 5개 입력받아 출력하는 프로그램</h3>
+        <input type="button" value="추가" onclick="proc2()">
+        <br>
+        <div id="result2"></div>
+    </div>
+</body>
+</html>

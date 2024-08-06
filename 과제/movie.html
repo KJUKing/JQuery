@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+
+        }
+        iframe{
+            width: 70%;
+            height: 400px;
+        }
+    </style>
+    <script>
+        function playshow(videoId){
+            //video url
+            let vurl = "https://www.youtube.com/embed/"+videoId;
+            //iframe id = promotion_video인 요소로 접근 검색
+            let ivideo = document.getElementById("promotion_video");
+            //iframe의 src의 값을 동영상 주소로 설정
+            ivideo.setAttribute('src', vurl);
+        }
+        
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe id="promotion_video"></iframe> 
+    <br><br>
+    <img src="../images/콜라광고1.jpg" alt="콜라광고1.jpg" 
+    onclick="playshow('Y8eSiUnePyA?si=5PRCWaeWlldPJZV8')">
+    <img src="../images/콜라광고2.jpg" alt="콜라광고2.jpg" 
+    onclick="playshow('R3HVHsKvXbM?si=G9E-AV6ftp71dabk&autoplay=1&mute=1')">
+</body>
+</html>

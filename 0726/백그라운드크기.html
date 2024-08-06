@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width : 30%;
+height : 200px;
+margin : 10px;
+padding : 30px;
+border : 1px solid blue;
+background-image : url(../images/Penguins.jpg);
+background-repeat : no-repeat;
+}
+#d1{
+	background-size : auto; /*원래크기*/
+}
+#d2{
+	background-size : cover; /* 크기에 맞도록 자르거나 늘려서*/
+}
+#d3{
+	background-size : contain; /*온전히 보이도록*/
+}
+</style>
+</head>
+<body>
+<img src="../images/Penguins.jpg">
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>

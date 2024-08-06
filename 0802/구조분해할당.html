@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted orange;
+            background-image: linear-gradient(skyblue, pink, white);
+        }
+    </style>
+    <script>
+        const myCar = {
+            make : 'bmw',
+            model : 'x5',
+            year : 2020
+        }
+
+        const printStr = (res) =>{
+            document.querySelector(res).innerHTML = str;
+        }
+        proc1 = () => {
+            // //일부분만 가져오기
+            // const aa = myCar.make;
+            // const bb = myCar.model;
+
+            const {make, model} = myCar;
+            console.log(make, model);
+
+            str = "make와 model만 <br>";
+            str += `${make} ${model}`;
+            printStr('#result1');
+        }
+
+        proc2 = () => {
+            const {year} = myCar;
+
+            str = "year만 <br>";
+            str += `${year}`;
+            printStr('#result2');
+        }
+
+        proc3 = () => {
+            //일부분만 model, year만
+            const {make, ...rest} = myCar; //펼침연산자 spreadOperator
+            // ...rest의 결과는 리터럴 객체
+            //make의 값 : bmw
+            //...rest : { model : 'x5' , year : 2020 }
+
+            str ="";
+            for(rr in rest){
+                console.log(rr);
+                str += `myCar[${rr}] -> ${myCar[rr]} <br>`;
+            }
+            printStr('#result3');
+        }
+
+        const users = [
+            {name : "철수", age : 25},
+            {name : "영희", age : 30}
+        ]
+        proc4 = () => {
+            str = "";
+            // users.forEach(({name, age}, index) =>{
+            //     console.log(name, age);
+            // })
+
+            // for(const user of users){
+            //     console.log(user.name, user.age);
+            // }
+            
+            for(const {name, age} of users){
+                console.log(name, age);
+                str += `${name} ${age} <br>`;
+            }
+            printStr('#result4');
+        }
+
+        proc5 = () => {
+            
+            userProc(users); // users 배열객체
+            
+        }
+
+        function userProc(persons){ //users를 넘겨받은 배열객체
+            // persons.array.forEach(element => {
+                
+            // });
+            str = "";
+            // persons.forEach((people) =>{
+            //     console.log(people.name, people.age);
+            // })
+
+            // persons.forEach(({name, age}) =>{
+            //     console.log(name, age);
+            // })
+
+            for(const {name,age} of persons){
+                console.log(name, age);
+                str += `${name} , ${age} <br>`;
+            }
+
+            printStr('#result5');
+        }
+    </script>
+</head>
+<body>
+    
+    
+    <h2>1. 일부분만 분해 할당 -make model</h2>
+    <input type="button" value="확인" onclick="proc1()">
+    <br>
+    <div id="result1"></div>
+    
+    
+    <h2>2. 일부분만 분해 할당 -year</h2>
+    <input type="button" value="확인" onclick="proc2()">
+    <br>
+    <div id="result2"></div>
+
+    <h3>3. 일부분만 model.tear const {make, ...rest}</h3>
+    <input type="button" value="확인" onclick="proc3()">
+    <br>
+    <div id="result3"></div>
+
+
+    <h3></h3>
+    <br>
+    <input type="button" value="확인" onclick="proc4()">
+    <div id="result4"></div>
+
+
+    <h3></h3>
+    <br>
+    <input type="button" value="확인" onclick="proc5()">
+    <div id="result5"></div>
+</body>
+</html>

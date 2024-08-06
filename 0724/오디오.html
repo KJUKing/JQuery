@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 2.0rem;
+        }
+        .pp{
+            font-size: 1.0rem;
+        }
+    
+    </style>
+    <script>
+        
+        // let변수와 const객체는 중복선언할수없다
+        // var는 가능하다.
+
+        var aa = 20;
+        var aa = 10;
+
+        let a = 10;
+        a = 20;
+        // let a = 30; 중복 선언불가
+
+        //Audio객체를 생성한다
+        const myAudio = new Audio();
+        // myAudio.setAttribute("src", "../multi/old_pop.mp3");
+        myAudio.src = "../multi/old_pop.mp3";
+        //함수 선언
+        function btnplay(){
+            myAudio.play();
+        }
+        function btnpause(){
+            myAudio.pause();   
+        }
+        function btnstop(){
+            myAudio.stop(); 
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        autoplay가 안되는 이유
+        무작위 광고와 자동재생 미디어 때문에 사용자 환경이 안좋아지기 때문
+
+        구글에서 2018년에 autoplay policy를 정의했다
+
+        동일 origin도메인 내에서 유저 인터렉션 이벤트 발생시 자동재생이 가능하다
+    </pre>
+    <audio src="../multi/old_pop.mp3" autoplay controls></audio>
+    <!-- autoplay="autoplay" 콜 밸류가 이름이같으면 생략해도된다 -->
+
+    <hr color="red">
+    <p>Audio객체를 생성하여 실행한다</p>
+    <p class="pp">각버튼의 기능을 부여하기위해서 스크립트가 필요하다 </p>
+    <p class="pp">각버튼에서 onclick = "함수호출()" </p>
+    <input type="button" id="btnplay" value="재생버튼" onclick="btnplay()">
+    <input type="button" id="btnpause" value="일시정지버튼" onclick="btnpause()">
+    <input type="button" id="btnstop" value="정지버튼" onclick="btnstop()">
+
+</body>
+</html>

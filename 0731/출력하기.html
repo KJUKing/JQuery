@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function proc1(){
+            let gugu = 5;
+            let str ='';
+            for(let i =1; i<=9; i++){
+                str += gugu + " * " + i + " = " + (gugu * i) + "<br>";
+            }
+
+            //id=result인 요소에 str의 값 출력
+            document.getElementById('result').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <input type ="button" value ="확인" onclick="proc1()">
+    <br><br>
+    <div id="result"></div>
+
+
+</body>
+</html>

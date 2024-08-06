@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px dotted red;
+            width: 80%;
+            height: 100px;
+            margin: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        function proc1(){
+
+            //id=d1인 요소 접근
+            // let vdiv = document.getElementById('d1');
+            let vdiv = document.querySelector('#d1');
+
+            //요소의 style을 변경 - display
+            vdiv.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">Hello</div>
+    <input type="button" value="확인" onclick="proc1()">
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid blue;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        .c1{
+            background : yellow;
+        }
+        .c2{
+            background : skyblue;
+        }
+        .c3{
+            background: lightgreen;
+        }
+        .c4{
+            background : lightpink;
+        }
+        #d6{
+            position: relative;
+            top:79px;
+            left:100px;
+        }
+        #d11{
+            position : absolute;
+            top: 150px;
+            left: 120px;
+
+        }
+        #d12{
+            position : absolute;
+        }
+        #d12 div{
+            width: 50px;
+            height: 50px;
+            position : absolute;
+            top : 20px;
+            left : 30px;
+            border-radius: 50%;
+            border: 1px dotted red;
+        }
+        #d15{
+            position : fixed;
+            top : 200px;
+            right: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1" class="c1">d1</div>
+    <div id="d2" class="c2">d2</div>
+    <div id="d3" class="c3">d3</div>
+    <div id="d4" class="c4">d4</div>
+    <hr>
+    <div id="d5" class="c1">d5</div>
+    <div id="d6" class="c2">d6<br>relative;<br>
+        top:79px;<br>
+        left:100px;<br></div>
+    <div id="d7" class="c3">d7</div>
+    <div id="d8" class="c4">d8</div>
+    <hr>
+    <div id="d9" class="c1">d9</div>
+    <div id="d10" class="c2">d10</div>
+    <div id="d11" class="c3">d11<br>absolute;<br>
+        top: 150px;<br>
+        left: 120px;<br></div>
+    <div id="d12" class="c4">d12<div>d12_1</div></div>
+    <hr>
+    <div id="d13" class="c1">d13</div>
+    <div id="d14" class="c2">d14</div>
+    <div id="d15" class="c3">d15</div>
+    <div id="d16" class="c4">d16</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //함수표현식은 호이스팅이 안되기때문에
+        //호출하기전에 미리 선언한다.
+        const sum = (...args) => {
+            let leng = args.length;
+            let total = 0;
+            for(let i = 0; i<args.length; i++){
+                total += args[i];
+            }
+
+            return total;
+        }
+
+        //함수호출
+        let vtot = sum(10,30,45,67,12);
+
+        console.log(vtot);
+
+        vtot = sum(1,5,6,7,8);
+
+        console.log(vtot);
+
+         //함수선언/정의
+         //함수선언식은 위치가 호출 전이나 뒤나 문제없다
+        //function sum(...args){
+        //     let leng = args.length;
+        //     let total = 0;
+        //     for(let i = 0; i<args.length; i++){
+        //         total += args[i];
+        //     }
+
+        //     return total;
+        // }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid blue;
+            margin: 20px auto;
+        }
+        td{
+            width : 100px;
+            height: 50px;
+            text-align: center;
+        }
+        caption{
+            background-color: bisque;
+            /* border : 1px dotted orange; */
+            margin : 10px;
+            font-size: 2.0rem;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+    <caption>
+        테이블병합
+    </caption>
+    <tr>
+        <td colspan="2">1</td>
+        <!-- <td>2</td> -->
+        <td colspan="2">2</td>
+        <!-- <td>4</td> -->
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td colspan="4">1</td>
+        <!-- <td>2</td>
+        <td>3</td>
+        <td>4</td> -->
+        <td colspan="2">5</td>
+        <!-- <td>6</td> -->
+    </tr>
+    <tr>
+        <td colspan="4">1</td>
+        <!-- <td>2</td>
+        <td>3</td>
+        <td>4</td> -->
+        <td colspan="2" rowspan="2">2</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <!-- <td rowspan="2" colspan="2">5</td> -->
+        <!-- <td>6</td> -->
+    </tr>
+</table>
+</body>
+</html>

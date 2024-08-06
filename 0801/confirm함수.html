@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="http://192.168.146.51/webpro/css/public.css">
+    <script>
+        const proc1 = () => {
+            
+            let str = "";
+            while(true){
+                let gugu = prompt("구구단 입력");
+
+                str += `*** ${gugu}단 ***<br>`;
+                for(let i =1; i<=9; i ++){
+                    str += `${gugu} * ${i} = ${gugu*i} <br>`
+                }
+           
+            //출력
+                document.querySelector('#result').innerHTML = str;
+            //계속할래? - confirm()
+            //취소버튼 눌렀는지 false인지 비교while문을 종료한다
+
+            let yn = confirm("계속 하시겠습니까?");
+            if(!yn) break;
+
+            }
+        }
+
+        window.onload = () => {
+            // let objbut = document.querySelector('#but1')
+            // objbut,addEventListener('click' , function(){};)
+
+
+            document.querySelector('#but1').addEventListener('click, proc1')
+        }
+
+   </script>
+</head>
+
+<body>
+	<pre>
+        confirm() 함수는 사용자와 묻고 대답하기를 실행 하는 함수 
+        확인 : true를 리턴
+        취소 : false를 리턴
+
+        이벤트 핸들러 작성  
+        1. 태그에서 직접
+        &lt;input type="button" value="확인" id="but1">
+        
+
+        2. script에서 설정
+        버튼객체 = id=but인 요소를 찾는다
+        버튼객체.addEventListener('이벤트이름', 실행할 function)
+    </pre>
+
+    <input type="button" value="확인" onclick="proc1()">
+	    <br>
+	    <br>
+	    <div id="result"></div>
+</body>
+</html>

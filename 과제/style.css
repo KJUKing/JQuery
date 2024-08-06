@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+}
+header, nav, footer {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+header h1 {
+    display: flex;
+    align-items: center;
+}
+header h1 img {
+    margin-right: 10px;
+}
+header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #ddd;
+}
+main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+aside {
+    flex: 15%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+aside ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+aside ul li {
+    margin: 0; /* 항목 간 간격 제거 */
+    padding: 10px;
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px;
+}
+aside ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+.category-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; /* 카테고리 제목에는 테두리 제거 */
+}
+section {
+    flex: 70%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#shopcart, #login, #register {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.player-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+.player-container img {
+    width: 150px;
+    height: 150px;
+}
+.player-container audio {
+    margin-top: 10px;
+    width: 100%;
+}
+.player-container p {
+    font-size: 1.0rem;
+}
+hr {
+    width: 100%;
+    color: red;
+}
+iframe{
+    
+}

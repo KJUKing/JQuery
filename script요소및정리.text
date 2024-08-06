@@ -1,0 +1,48 @@
+******---html요소찾기---******
+
+-- id를 이용한 요소 찾기
+var a= (window.생략가능)document.getElementById('id이름');
+let a= document.queryselector('#id이름');
+
+-- class를 이용한 요소 찾기
+var b1= document.getElementsByClassName('class이름')[0] // 첫번째 요소만 탐색
+var b2= document.getElementsByClassName('class이름')
+let b3= document.queryselector('.class이름'); //첫번째 요소만 검색
+let b4= document.queryselectorAll('.class이름');
+
+-- tag이름을 이용한 요소 찾기
+const c1= document.getElementsByTagName('tag이름');
+const c2= document.queryselectorAll('tag이름');
+
+******---html요소의 값 가져오기 / 설정하기---****** **************중요
+a.value-input 요소의 입력값 , textarea, select/option
+a.innerHTML / a.innerText -- div, p, ul/li ol /li, span, pre
+tr/td
+
+******---html요소에 값 출력하기---****** 중요 ************************
+a.value = 값 - input 요소의 입력값, textarea, select/option
+a.innerHTML = 값 / a.innerText = 값 -- div, p, ul/li ol /li, span, pre
+tr/td
+
+******---html변수 선언---******
+var : 같은 이름이 중복되어 선언 가능 / 값 변경 가능함 - scope 함수영역
+let : 같은 이름이 중복되어 선언 불가능 / 값 변경은 가능함 - scope 블럭영역
+const : 같은 이름이 중복되어 선언 불가능 / 값 변경 불가능 - scope 전역영역
+
+
+es6
+    let/const
+    queryselector
+    queryselectorAll
+    템플릿리터럴
+    화살표함수
+        함수 선언식 function aa(){}
+        함수 표현식 aa = function(){}
+        화살표함수 const aa = () => {}
+
+        fruits.forEach(function(item, index){})
+        fruits.forEach((item, index) => {})
+
+    함수 나머지 매개변수 Rest Parameter
+    펼침연산자 
+    class - 원본 function

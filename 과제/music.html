@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .player-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            width: 220px;
+        }
+        .player-container img {
+            width: 150px;
+            height: 150px;
+        }
+        .player-container audio {
+            margin-top: 10px;
+            width: 100%;
+        }
+        .player-container p {
+            font-size: 1.0rem;
+        }
+        hr {
+            width: 100%;
+            color: red;
+        }
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <img src="../images/음악1.jpg" alt="음악1.jpg">
+        <p>ITZY 타이틀곡 달라달라</p>
+        <audio src="../multi/old_pop.mp3" controls></audio>
+        <input type="button" value="쇼핑카트에 담기">
+    </div>
+
+    <div class="player-container">
+        <img src="../images/Anne-Marie(앤마리)-2002.jpg" alt="Anne-Marie(앤마리)-2002.jpg">
+        <p>앤 마리 2002</p>
+        <audio src="../multi/old_pop.mp3" controls></audio>
+        <input type="button" value="쇼핑카트에 담기">
+    </div>
+
+    <div class="player-container">
+        <img src="../images/소우주.jpg" alt="소우주.jpg">
+        <p>소우주 방탄소년단</p>
+        <audio src="../multi/old_pop.mp3" controls></audio>
+        <input type="button" value="쇼핑카트에 담기">
+    </div>
+    
+    <hr>
+</body>
+</html>

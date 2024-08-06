@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .computer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .computer {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        .computer img {
+            width: 100%; /* 부모 요소의 너비에 맞춰서 이미지 크기 조정 */
+            height: auto; /* 이미지 비율 유지 */
+            max-width: 300px; /* 최대 너비 설정 */
+            max-height: 300px; /* 최대 높이 설정 */
+        }
+        .computer p {
+            font-size: 1.0rem;
+        }
+        .computer-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: left;
+            width: 100%; /* 부모 요소의 너비에 맞춰서 왼쪽 정렬 */
+            margin: 0;
+            padding: 0;
+        }
+        button, .computer input[type="button"] {
+            margin-top: 20px;
+            width : auto;
+            align-self : center;
+        }
+    </style>
+</head>
+<body>
+    <div class="computer-container">
+        <div class="computer">
+            <img src="../images/옷1.jpg" alt="옷1.jpg">
+            <p>바지</p>
+            <input type="button" value="쇼핑카트에 담기">
+        </div>
+
+        <div class="computer">
+            <img src="../images/옷2.jpg" alt="옷2.jpg">
+            <p>신발</p>
+            <input type="button" value="쇼핑카트에 담기">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function Rect(garo, sero){
+            this.garo = garo;
+            this.sero = sero;
+
+            this.getArea = function(){
+               return this.garo * this.sero
+            }
+        }
+
+        Rect.prototype.getName = function(){
+            return this.name;
+        }
+
+        printRect = (obj, out) =>{
+            //rect정보 출력
+            let str ="";
+            str += `${obj.getName()}<br>`
+            str += `가로 : ${obj.garo} <br>`
+            str += `세로 : ${obj.sero} <br>`
+            str += `면적 : ${obj.getArea()} <br>`
+            
+            document.querySelector(out).innerHTML = str;
+        }
+
+        proc1 = () =>{
+            const r1 =new Rect(5,3);
+            r1.name = "세모";
+            //출력
+            printRect(r1, "#result1");
+        }
+
+        proc2 = () =>{
+            const r2 = new Rect(3,8);
+            r2.name = "네모";
+            r2.getName = function(){
+                return this.name;
+            }
+            printRect(r2, '#result2');
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+    <h3>생성자 함수 function Rect(garo, sero){}
+        사용시 const r1 =new Rect(5,3); 생성해야함
+    </h3>
+    <h3>객체 정보 출력하기</h3>    
+
+    <input type="button" value="확인" onclick="proc1()">
+    <br>
+    <div id="result1"></div>
+
+    <h3>생성자 함수 function Rect(garo, sero){}<br>
+        사용시 const r1 =new Rect(3,8); 생성해야함
+    </h3>
+    <h3>객체 정보 출력하기</h3>    
+    name속성과 getName()메소드 추가 <br>
+    r2만 사용가능하다<br>
+    <input type="button" value="확인" onclick="proc2()">
+    <br>
+    <div id="result2"></div>
+</body>
+</html>
