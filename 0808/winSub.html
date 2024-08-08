@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        proc1 = () =>{
+            //입력한 값을 부모창의 result1에 출력한다
+            // id가 txt인 요소에서 입력한 값을 가져온다
+            let txtValue = document.getElementById('txt').value;
+
+            //여기는 자식창이고 부모창을 나타내는 속성-opener
+            opener.document.getElementById('result1').innerHTML = txtValue;
+
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h3>1. text입력후 버튼 클릭하면 proc1() 함수 호출<br>
+            입력한 값을 부모창으로 보내서 출력
+         </h3>
+        <input type="text" id="txt">
+        <button type="button" value="확인" onclick="proc1()">확인</button>
+        <br>
+        <div id="result1"></div>
+    </div>
+</body>
+</html>

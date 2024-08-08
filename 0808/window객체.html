@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        proc1 = () =>{
+            let newWind = window.open("winSub.html", "새로운윈도우",
+                                 "width=300 height=200 top=200 left=200");
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="box">
+        <h3>1. open()/ open(url, name/target, spec)<br>
+         </h3>
+        <input id="number" type="text">
+        <button type="button" onclick="proc1()">확인</button>
+        <br>
+        <div id="result1"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="../css/public.css">
+    <script>
+        let today = new Date();
+        proc1 = () =>{
+            //자기 생일
+            // myday = new Date("1999.09.18");
+            let myDay = new Date(1999,7-1,18);
+
+            //오늘의 millisec
+            let toMilli = today.getTime();
+            let myMilli = myDay.getTime();
+
+            times = toMilli - myMilli;
+
+            my = times / 1000 / 60 / 60 / 24 / 365;
+
+            // alert(my);
+            out = `오늘 : ${today.toLocaleDateString()} <br>`;
+            out += `생일 : ${myDay.toLocaleDateString()} <br>`;
+            out += `오늘 : ${my}년 째 살고있습니다`;
+
+            document.getElementById('result1').innerHTML = out;
+        }
+
+        proc2 = () =>{
+            //오늘의 millisec
+            let toMilli = today.getTime();
+
+            //100일의 millisec
+            let hundMilli = 100 * 60 * 60 * 24 * 1000;
+            let times = toMilli + hundMilli;
+
+            let hundDate = new Date(times);
+
+            // alert(my);
+            out = `오늘 : ${today.toLocaleDateString()} <br>`;
+            out += `100일후 : ${hundDate.toLocaleDateString()} <br>`;
+
+            document.getElementById('result2').innerHTML = out;
+        }
+
+        proc3 = () =>{
+
+            //1. id가 pday인 요소의 값을 가져온다 - 문자열데이터
+            let pday= document.getElementById('pday').value;
+            //2. 1번의 값으로 Date객체를생성
+            let pDate = new Date(pday);
+            //3. 오늘의 millisec = 2번의 millisec를 구한다
+            let times = today.getTime() - pDate.getTime();
+            //4. 3번의 times로 경과일수를 구한다 /1000/60/60/24
+            let day = times /1000/ 60 /60/ 24;
+            //5. 일수를 비교한다
+            if(day>7){
+                str = "교환불가입니다";
+            }
+            else{
+                str = "교환가능합니다";
+            }
+            
+            //출력
+            out = `오늘 : ${today.toLocaleDateString()} <br>`;
+            out += `구입날짜 : ${pDate.toLocaleDateString()} <br>`;
+            out += str;
+
+            document.getElementById('result3').innerHTML = out;
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h3>1 경과시간 구하기 <br>
+        getTime() : millisec값 리턴 <br>
+        millisec / 1000 / 60 / 24 / 365 </h3>
+        <input type="button" value="확인" onclick="proc1()">
+        <br>
+        <div id="result1"></div>
+    </div>
+    <div class="box">
+        <h3>1 경과시간 구하기 <br>
+        getTime() : millisec값 리턴 <br>
+        오늘부터 1일. 100일후의 날짜를 출력
+         </h3>
+        <input type="button" value="확인" onclick="proc2()">
+        <br>
+        <div id="result2"></div>
+    </div>
+
+    <div class="box">
+        <h3>1 경과시간 구하기 <br>
+        getTime() : millisec값 리턴 <br>
+        구입날짜로부터 오늘까지 경과일 수 구하기
+        7보다 크면 교환 불가능 7보다 작으면 교환 가능
+         </h3>
+         <input type="date" id="pday">
+        <input type="button" value="확인" onclick="proc3()">
+        <br>
+        <div id="result3"></div>
+    </div>
+</body>
+</html>
