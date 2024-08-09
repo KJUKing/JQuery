@@ -28,8 +28,24 @@
             location.replace("timeout_interval.html");
         }
         fnReload = () => {
-            location.reload("timeout_interval.html");
+            //랜덤으로 발생되는 문자열을 result3에 출력
+            //1초후에 reload(새로고침) 원래 문서로 돌아온다
+            arr = ["Hello", "happy", "사랑은 늘 도망가", "우리들의 블루스", "이제나만 믿어요",
+                "happynewYear", "good~~~", "별빛같은나의사랑아"];
+            rand = parseInt(Math.random() * arr.length);
+            //문자열 선택 : arr[rand]
+            res3 = document.getElementById('result3');
+
+            res3.innerHTML=arr[rand];
+            res3.style.color = "red";
+            res3.style.fontSize = "2.0rem";
+
+            setTimeout(function(){
+                location.reload();
+            },1000)
         }
+
+
     </script>
 </head>
 <body>
@@ -46,6 +62,7 @@
             <h2>2. 문서이동하기<br></h2>
             <h3>1. button onclick= "proc2()"</h3>
             <input type="button" value="확인" onclick="proc2()">
+            <input type="button" value="확인" onclick="location.href='href.jsp?id=0001'">
             <br>
             <h3>2. a href에서 다른 파일 지정 href="파일이름"</h3>
             <a href="timeout_interval.html">이동</a>
@@ -73,9 +90,9 @@
          </h3>
         <input type="button" value="확인" onclick="fnAssign()">
         <input type="button" value="확인" onclick="fnReplace()">
-        <input type="button" value="확인" onclick="fnReload()">
+        <input type="button" value="reload" onclick="fnReload()">
         <br>
-        <div id="result1"></div>
+        <div id="result3"></div>
     </div>
 </body>
 </html>
